@@ -31,7 +31,7 @@ def decimal_to_roman(decimal: int) -> str:
         elif 5 <= digit <= 8:
             roman += FIVES[digit_pos] + ONES[digit_pos] * (digit - 5)
 
-        # Dígito si entre 5 y 8: es un uno seguido por el uno siguiente
+        # Dígito si 9: es un uno seguido por el uno siguiente
         elif digit == 9:
             roman += ONES[digit_pos] + ONES[digit_pos + 1]
     return roman
